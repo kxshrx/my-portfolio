@@ -24,3 +24,213 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations for subtle effects */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 0.8s ease-out forwards;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
+
+
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Main Honeycomb Container */
+.honeycomb-main {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.honeycomb {
+  --s: 66px; /* hexagon size */
+  --m: 2px; /* small margin for better alignment */
+  --f: calc(var(--s) * 1.732); /* width calculation */
+  
+  font-size: 0; /* remove inline-block spacing */
+  width: calc(var(--f) * 5 + var(--m) * 10); /* width for 7-9 items per row */
+  margin: 0 auto;
+}
+
+/* Perfect honeycomb tessellation */
+.honeycomb::before {
+  content: '';
+  width: calc(var(--s) / 2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(
+    transparent 0,
+    transparent calc(var(--s) * 1.732 + var(--m) * 2),
+    #000 0,
+    #000 calc(var(--s) * 1.732 + var(--m) * 2 + 1px)
+  );
+}
+
+/* Hexagon styling */
+.hex {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  margin-bottom: calc(var(--m) - var(--s) * 0.2886);
+  position: relative;
+  opacity: 0;
+  animation: hex-appear 0.8s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+/* Centering hexagon contents */
+.hex-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  /* border: 1px solid #2a2a2a; */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+  cursor: pointer;
+  /* transition: all 0.3s ease;
+  
+  */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centering the icons inside each hexagon */
+.tech-icon {
+  font-size: 22px; /* increased size */
+  color: #e5e5e5;
+  margin-bottom: 3px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect on hexagons */
+.hex:hover .hex-content {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  transform: scale(1.05);
+box-shadow: 0 0 25px rgba(139, 92, 246, 0.5); /* Stronger glow */
+}
+
+/* Hover effect for the icon */
+.hex:hover .tech-icon {
+  color: #8b5cf6;
+  transform: scale(1.1);
+}
+
+/* Text visibility on hover */
+.tech-name {
+  font-size: 7px; /* size of the text */
+  color: #999;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: all 0.3s ease;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hover text visibility */
+.hex:hover .tech-name {
+  opacity: 1;
+  transform: translateY(0);
+  color: #8b5cf6;
+  font-size: 8px; /* Slightly increased for readability */
+}
+
+/* Animation for hexagon appearing */
+@keyframes hex-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design - keeps 7-9 items per row */
+@media (max-width: 768px) {
+  .honeycomb {
+    --s: 50px; /* smaller hexagons */
+    --m: 1px;
+    width: calc(var(--f) * 3.5 + var(--m) * 7); /* ~5-7 items per row on mobile */
+  }
+
+  .tech-icon {
+    font-size: 18px;
+  }
+
+  .tech-name {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .honeycomb {
+    --s: 42px; /* smaller hexagons */
+    --m: 1px;
+    width: calc(var(--f) * 2.5 + var(--m) * 5); /* ~4-5 items per row on small screens */
+  }
+
+  .tech-icon {
+    font-size: 16px;
+  }
+
+  .tech-name {
+    font-size: 5px;
+  }
+}
