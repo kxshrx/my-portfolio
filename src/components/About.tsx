@@ -70,7 +70,7 @@ const About: React.FC = () => {
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8f7a67]/30 to-[#8f7a67]/20 rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-500 blur-sm"></div>
           <Image
-            src="/img2.jpg"
+            src="/img.jpg"
             alt="Kishore Kumar J"
             width={160}
             height={160}
