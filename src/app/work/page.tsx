@@ -55,8 +55,8 @@
 // //                 key={color}
 // //                 onClick={() => setCurrentAccent(color)}
 // //                 className={`px-3 py-1 text-xs rounded-full border transition-all ${
-// //                   currentAccent === color 
-// //                     ? 'bg-white text-black' 
+// //                   currentAccent === color
+// //                     ? 'bg-white text-black'
 // //                     : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
 // //                 }`}
 // //               >
@@ -66,7 +66,7 @@
 // //           </div>
 
 // //           <h1 className="text-3xl font-bold text-white mb-2">Work</h1>
-// //           <div 
+// //           <div
 // //             className="w-20 h-0.5 bg-gradient-to-r to-transparent rounded-full opacity-70 mb-8"
 // //             style={{ backgroundImage: `linear-gradient(to right, ${accentColor}, transparent)` }}
 // //           ></div>
@@ -76,7 +76,7 @@
 // //                 <div className="text-xs text-gray-400 mb-1">
 // //                   {item.duration}
 // //                 </div>
-// //                 <div 
+// //                 <div
 // //                   className="text-lg font-bold mb-0.5"
 // //                   style={{ color: accentColor }}
 // //                 >
@@ -94,8 +94,6 @@
 // //     </div>
 // //   );
 // // }
-
-
 
 // "use client";
 // import React, { useState } from "react";
@@ -154,8 +152,8 @@
 //                 key={color}
 //                 onClick={() => setCurrentAccent(color)}
 //                 className={`px-3 py-1 text-xs rounded-full border transition-all ${
-//                   currentAccent === color 
-//                     ? 'bg-white text-black' 
+//                   currentAccent === color
+//                     ? 'bg-white text-black'
 //                     : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
 //                 }`}
 //               >
@@ -165,7 +163,7 @@
 //           </div>
 
 //           <h1 className="text-3xl font-bold text-white mb-2">Work</h1>
-//           <div 
+//           <div
 //             className="w-20 h-0.5 bg-gradient-to-r to-transparent rounded-full opacity-70 mb-8"
 //             style={{ backgroundImage: `linear-gradient(to right, ${accentColor}, transparent)` }}
 //           ></div>
@@ -175,7 +173,7 @@
 //                 <div className="text-xs text-gray-400 mb-1">
 //                   {item.duration}
 //                 </div>
-//                 <div 
+//                 <div
 //                   className="text-lg font-bold mb-0.5"
 //                   style={{ color: accentColor }}
 //                 >
@@ -193,8 +191,10 @@
 //     </div>
 //   );
 // }
+
 "use client";
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 
 const workItems = [
   {
@@ -221,29 +221,58 @@ const workItems = [
 ];
 
 export default function Work() {
+  // Set the page title when component mounts
+  useEffect(() => {
+    document.title = "Work : Kishore Kumar J";
+
+    // Optional: Set meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "My professional experience and internships"
+      );
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
       <div className="pt-20">
-        <section className="max-w-[736px] mx-auto px-4 py-12">
-          <h1 className="text-3xl font-bold text-white mb-2">Work</h1>
-          <div className="w-20 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-70 mb-8"></div>
-          <div className="space-y-12">
-            {workItems.map((item, idx) => (
-              <div key={idx}>
-                <div className="text-xs text-gray-400 mb-1">
-                  {item.duration}
+        <div className="max-w-[736px] mx-auto px-4">
+          <div className="py-12">
+            <div className="space-y-2 mb-4">
+              <h1 className="text-3xl font-bold text-white">Work</h1>
+              <div className="w-20 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
+            </div>
+
+            {/* Work Items with animations */}
+            <div className="pb-12">
+              {workItems.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`opacity-0 animate-fade-in-up delay-${
+                    (idx + 1) * 200
+                  } group`}
+                >
+                  <div className="py-4">
+                    <div className="text-xs text-gray-400 mb-1">
+                      {item.duration}
+                    </div>
+                    <div className="text-lg font-semibold text-[#8f7a67] mb-1">
+                      {item.place}
+                    </div>
+                    <div className="text-sm text-gray-400 mb-3">
+                      {item.title}
+                    </div>
+                    <div className="text-sm text-gray-300 leading-relaxed">
+                      {item.description}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-lg font-bold mb-0.5 text-[#8f7a67]">
-                  {item.place}
-                </div>
-                <div className="text-sm text-gray-400 mb-2">{item.title}</div>
-                <div className="text-base text-gray-100">
-                  {item.description}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

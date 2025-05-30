@@ -4,7 +4,12 @@ import TechStack from '../components/TechStack';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import SequentialReveal from '../components/SequentialReveal';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Portfolio : Kishore Kumar J',
+  description: 'Computer Science student passionate about AI, web development, and IoT',
+};
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col text-white bg-gradient-to-b from-zinc-900 to-black">

@@ -1,9 +1,8 @@
 "use client";
-import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import Link from 'next/link';
+import React, { useEffect } from "react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Link from "next/link";
 
-// Project data based on your actual projects
 const allProjects = [
   {
     id: 1,
@@ -13,7 +12,7 @@ const allProjects = [
     tech: ["Yolo V8", "OpenCV", "Raspberry Pi", "Firebase", "JavaScript"],
     github: "https://github.com/samprincefranklink/pothole-detection",
     demo: "https://pothole-detection-demo.vercel.app",
-    category: "IoT & ML"
+    category: "IoT & ML",
   },
   {
     id: 2,
@@ -23,7 +22,7 @@ const allProjects = [
     tech: ["Mediapipe", "Arduino", "Python", "Raspberry Pi", "Firebase", "JavaScript"],
     github: "https://github.com/samprincefranklink/snore-detection",
     demo: "https://snore-detection-demo.vercel.app",
-    category: "IoT & Health"
+    category: "IoT & Health",
   },
   {
     id: 3,
@@ -33,7 +32,7 @@ const allProjects = [
     tech: ["OpenAI", "JavaScript", "Firebase"],
     github: "https://github.com/samprincefranklink/umlify-ai",
     demo: "https://umlify-ai.vercel.app",
-    category: "AI & Web"
+    category: "AI & Web",
   },
   {
     id: 4,
@@ -43,7 +42,7 @@ const allProjects = [
     tech: ["Gemini Pro", "FAISS", "RAG", "Flask"],
     github: "https://github.com/samprincefranklink/rag-retrieval",
     demo: "https://rag-demo.vercel.app",
-    category: "AI & Backend"
+    category: "AI & Backend",
   },
   {
     id: 5,
@@ -53,7 +52,7 @@ const allProjects = [
     tech: ["React Native", "Firebase", "Google Maps API", "Machine Learning", "Node.js"],
     github: "https://github.com/samprincefranklink/campus-navigation",
     demo: "https://campus-nav-demo.vercel.app",
-    category: "Mobile & AI"
+    category: "Mobile & AI",
   },
   {
     id: 6,
@@ -63,21 +62,42 @@ const allProjects = [
     tech: ["Solidity", "Web3.js", "React", "Ethereum", "MetaMask", "IPFS"],
     github: "https://github.com/samprincefranklink/blockchain-voting",
     demo: "https://blockchain-voting-demo.vercel.app",
-    category: "Blockchain & Web"
-  }
+    category: "Blockchain & Web",
+  },
 ];
 
-const categories = ["All", "IoT & ML", "AI & Web", "AI & Backend", "IoT & Health", "Mobile & AI", "Blockchain & Web"];
+const categories = [
+  "All",
+  "IoT & ML",
+  "AI & Web",
+  "AI & Backend",
+  "IoT & Health",
+  "Mobile & AI",
+  "Blockchain & Web",
+];
 
 const ProjectsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("All");
   const [filteredProjects, setFilteredProjects] = React.useState(allProjects);
 
+  // Set the page title when component mounts
+  useEffect(() => {
+    document.title = "Projects : Kishore Kumar J";
+    
+    // Optional: Set meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore my projects in AI, IoT, web development, and machine learning');
+    }
+  }, []);
+
   React.useEffect(() => {
     if (selectedCategory === "All") {
       setFilteredProjects(allProjects);
     } else {
-      setFilteredProjects(allProjects.filter(project => project.category === selectedCategory));
+      setFilteredProjects(
+        allProjects.filter((project) => project.category === selectedCategory)
+      );
     }
   }, [selectedCategory]);
 
@@ -118,8 +138,8 @@ const ProjectsPage: React.FC = () => {
           {/* Projects Grid */}
           <div className="space-y-8 pb-12">
             {filteredProjects.map((project, index) => (
-              <div 
-                key={project.id} 
+              <div
+                key={project.id}
                 className={`opacity-0 animate-fade-in-up delay-${(index + 1) * 100} group`}
               >
                 <div className="border border-gray-800 rounded-lg p-6 hover:border-[#8f7a67]/30 transition-all duration-300 bg-black/20">
