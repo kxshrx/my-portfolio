@@ -6,74 +6,63 @@ import Link from "next/link";
 const allProjects = [
   {
     id: 1,
-    title: "Pothole Detection and Alert System",
-    description: "IoT and ML-based system for road safety using computer vision and real-time alerts.",
-    longDescription: "A comprehensive IoT and Machine Learning solution that detects potholes using YOLO V8 computer vision technology. The system uses Raspberry Pi for edge computing, OpenCV for image processing, and Firebase for real-time data storage and alerts. JavaScript handles the frontend interface for monitoring and reporting road conditions.",
-    tech: ["Yolo V8", "OpenCV", "Raspberry Pi", "Firebase", "JavaScript"],
-    github: "https://github.com/samprincefranklink/pothole-detection",
-    demo: "https://pothole-detection-demo.vercel.app",
-    category: "IoT & ML",
+    title: "Parallel Shortest Path Finder",
+    description: "A cutting-edge application demonstrating the parallel execution of three popular shortest path algorithms on real-world road networks.",
+    longDescription: "A cutting-edge application demonstrating the parallel execution of three popular shortest path algorithms (Dijkstra, Bellman-Ford, A*) on real-world road networks. It's highly relevant for anyone interested in algorithms, parallel processing, and mapping. Features parallel execution of shortest path algorithms, interactive OpenStreetMap integration, dynamic recalculation of paths with obstacles, and performance comparison of algorithms in real-time.",
+    tech: ["Flask", "NetworkX", "OSMnx", "Parallel Processing", "Leaflet.js", "jQuery"],
+    github: "https://github.com/yourusername/parallel-shortest-path",
+    demo: "https://parallel-path-demo.vercel.app",
+    category: "Algorithms & Mapping",
   },
   {
     id: 2,
-    title: "IoT Snore Detection System",
-    description: "Smart health monitoring system that detects snoring patterns and provides sleep quality insights.",
-    longDescription: "An IoT-enabled health monitoring system for sleep apnea detection and prevention. Uses Mediapipe for real-time audio processing, Arduino sensors for environmental monitoring, and Raspberry Pi for data processing. The system provides comprehensive sleep analysis and alerts for potential health issues.",
-    tech: ["Mediapipe", "Arduino", "Python", "Raspberry Pi", "Firebase", "JavaScript"],
-    github: "https://github.com/samprincefranklink/snore-detection",
-    demo: "https://snore-detection-demo.vercel.app",
-    category: "IoT & Health",
+    title: "Pothole Detection and Alert System",
+    description: "A real-time IoT system that detects potholes using computer vision (YOLO V8) on a Raspberry Pi for smart cities applications.",
+    longDescription: "A real-time IoT system that detects potholes using computer vision (YOLO V8) on a Raspberry Pi. This system is highly relevant for smart cities, road maintenance, and edge computing applications. Features YOLO V8-based pothole detection, real-time data storage and alerts using Firebase, edge computing with Raspberry Pi, and frontend interface for road monitoring.",
+    tech: ["YOLO V8", "OpenCV", "Raspberry Pi", "Firebase", "JavaScript"],
+    github: "https://github.com/yourusername/pothole-detection",
+    demo: "https://pothole-detection-demo.vercel.app",
+    category: "IoT & Computer Vision",
   },
   {
     id: 3,
-    title: "UMLifyAI - LLM UML Generator",
-    description: "AI-powered tool that generates UML diagrams from natural language descriptions.",
-    longDescription: "An innovative LLM-based tool that automatically generates UML diagrams from natural language requirements. Leverages OpenAI's language models to understand project descriptions and convert them into professional UML diagrams. Built with JavaScript and Firebase for seamless user experience and data management.",
-    tech: ["OpenAI", "JavaScript", "Firebase"],
-    github: "https://github.com/samprincefranklink/umlify-ai",
-    demo: "https://umlify-ai.vercel.app",
-    category: "AI & Web",
+    title: "Real-Time Autonomous Vehicle Path Planning Using Parallel Processing",
+    description: "A project that tackles real-time path planning for autonomous vehicles, utilizing parallelized algorithms for faster response times.",
+    longDescription: "A project that tackles real-time path planning for autonomous vehicles, utilizing parallelized algorithms to ensure faster response times for dynamic environments. Features parallelized pathfinding algorithms (Dijkstra, Bellman-Ford, A*), real-time route updates based on dynamic road conditions, and web-based visualization for route planning.",
+    tech: ["Python", "Flask", "OSMNX", "NetworkX", "Multithreading"],
+    github: "https://github.com/yourusername/autonomous-vehicle-path-planning",
+    demo: "https://autonomous-path-demo.vercel.app",
+    category: "Autonomous Systems",
   },
   {
     id: 4,
-    title: "Information Retrieval with RAG",
-    description: "Advanced information retrieval system using Retrieval-Augmented Generation.",
-    longDescription: "A sophisticated information retrieval model using Retrieval-Augmented Generation (RAG) and Large Language Models. Implements Gemini Pro for natural language processing, FAISS for efficient vector similarity search, and Flask for the backend API. Provides accurate and contextual information retrieval capabilities.",
-    tech: ["Gemini Pro", "FAISS", "RAG", "Flask"],
-    github: "https://github.com/samprincefranklink/rag-retrieval",
-    demo: "https://rag-demo.vercel.app",
-    category: "AI & Backend",
+    title: "PaveSense – Intelligent Road Health Mapping System",
+    description: "A unique system that uses mobile phone sensors to detect potholes and maps their locations in real-time using machine learning.",
+    longDescription: "A unique system that uses mobile phone sensors to detect potholes and maps their locations in real-time. The system's use of machine learning (XGBoost) for pothole detection is particularly noteworthy. Features real-time pothole detection using phone sensors, XGBoost model for pothole classification with high accuracy, and live map visualization of pothole locations with Leaflet.js.",
+    tech: ["Python", "XGBoost", "Leaflet.js", "NumPy", "Mobile Sensors"],
+    github: "https://github.com/yourusername/pavesense",
+    demo: "https://pavesense-demo.vercel.app",
+    category: "Mobile & ML",
   },
   {
     id: 5,
-    title: "Smart Campus Navigation",
-    description: "AI-powered campus navigation system with real-time crowd density analysis.",
-    longDescription: "An intelligent navigation system designed for educational campuses that provides real-time navigation, crowd analysis, and optimal route planning for students and visitors. Uses machine learning for predictive routing and React Native for cross-platform mobile experience.",
-    tech: ["React Native", "Firebase", "Google Maps API", "Machine Learning", "Node.js"],
-    github: "https://github.com/samprincefranklink/campus-navigation",
-    demo: "https://campus-nav-demo.vercel.app",
-    category: "Mobile & AI",
-  },
-  {
-    id: 6,
-    title: "Blockchain Voting System",
-    description: "Secure and transparent voting system built on blockchain technology.",
-    longDescription: "A decentralized voting platform that leverages blockchain technology to ensure transparency, security, and immutability in electoral processes. Built with Solidity smart contracts, Web3.js for blockchain interaction, and IPFS for decentralized storage.",
-    tech: ["Solidity", "Web3.js", "React", "Ethereum", "MetaMask", "IPFS"],
-    github: "https://github.com/samprincefranklink/blockchain-voting",
-    demo: "https://blockchain-voting-demo.vercel.app",
-    category: "Blockchain & Web",
+    title: "Sorting Visualizer",
+    description: "A fun and educational web app that visually demonstrates how different sorting algorithms work with interactive features.",
+    longDescription: "A fun and educational web app that visually demonstrates how different sorting algorithms work. While not as complex as the other projects, it's a highly interactive and valuable tool for learning algorithms. Features visual representation of sorting algorithms, adjustable array size and speed for better user interaction, color-coded elements to track sorting progress, and responsive mobile-friendly interface.",
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    github: "https://github.com/yourusername/sorting-visualizer",
+    demo: "https://sorting-visualizer-demo.vercel.app",
+    category: "Educational & Algorithms",
   },
 ];
 
 const categories = [
   "All",
-  "IoT & ML",
-  "AI & Web",
-  "AI & Backend",
-  "IoT & Health",
-  "Mobile & AI",
-  "Blockchain & Web",
+  "Algorithms & Mapping",
+  "IoT & Computer Vision",
+  "Autonomous Systems",
+  "Mobile & ML",
+  "Educational & Algorithms",
 ];
 
 const ProjectsPage: React.FC = () => {
@@ -87,7 +76,7 @@ const ProjectsPage: React.FC = () => {
     // Optional: Set meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore my projects in AI, IoT, web development, and machine learning');
+      metaDescription.setAttribute('content', 'Explore my projects in algorithms, IoT, autonomous systems, and machine learning');
     }
   }, []);
 
@@ -113,7 +102,7 @@ const ProjectsPage: React.FC = () => {
               <div className="w-20 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
             </div>
             <p className="text-gray-300 text-sm mb-8">
-              A comprehensive collection of my work spanning IoT, AI, blockchain, and web development. 
+              A comprehensive collection of my work spanning algorithms, IoT, autonomous systems, and machine learning. 
               Each project represents a unique challenge and learning experience in my journey as a developer.
             </p>
 

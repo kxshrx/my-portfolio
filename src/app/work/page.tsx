@@ -191,32 +191,39 @@
 //     </div>
 //   );
 // }
-
-"use client";
 "use client";
 import React, { useEffect } from "react";
 
 const workItems = [
   {
-    duration: "May2024 - On Going",
-    place: "Intel Corporation, Bangalore",
-    title: "Tech Intern",
+    duration: "January 2025",
+    place: "Google Data Analytics Professional Certificate",
+    title: "Google/Coursera Certification",
     description:
-      "Currently working as an intern in Intel Corporation's. I am applying my knowledge of IoT and cloud technologies to contribute to innovative solutions, gaining valuable experience in industry best practices and developing my technical skills in a dynamic and collaborative environment.",
+      "I successfully completed the Google Data Analytics Professional Certificate, a comprehensive 8-course specialization that focused on data cleaning, visualization, SQL programming, and end-to-end analytics processes. This certification honed my skills in analyzing and interpreting large datasets, preparing me for roles that demand a deep understanding of data analytics and decision-making processes.",
+    link: "https://coursera.org/professional-certificates/google-data-analytics",
   },
   {
-    duration: "May2021 - Jul2021",
-    place: "FOSSEE Summer Internship",
-    title: "Research Intern",
+    duration: "July 2024",
+    place: "Microsoft Azure AI Fundamentals (AI-900)",
+    title: "Microsoft Certification",
     description:
-      "I translated Arduino code to Python-based firmware, enhancing library functionality and accessibility. I also worked on an IR proximity sensor, gaining experience in sensor integration and data processing. This experience fostered my skills in Arduino and Python programming, and solidified my understanding of embedded systems development.",
+      "I earned the Microsoft Azure AI Fundamentals certification with a score of 931/1000, demonstrating my proficiency in AI workloads, machine learning principles, computer vision, natural language processing (NLP), and generative AI using Microsoft Azure. This certification reinforced my understanding of the core concepts and provided hands-on experience in implementing AI solutions on the Azure platform.",
+    link: "https://learn.microsoft.com/en-us/certifications/azure-ai-fundamentals/",
   },
   {
-    duration: "May2021 - Jul2021",
-    place: "KITE India",
-    title: "UI UX Intern",
+    duration: "Nov 2023 - Jan 2024",
+    place: "Microsoft Imagine Cup 2024",
+    title: "Cognitive Cue - An Elderly Ally",
     description:
-      "During my internship at KITE India as a UI/UX intern, I had the opportunity to work on the design and interface of a travel agency website. I collaborated with the team to create a user-friendly and visually appealing website that enhanced the overall user experience. It was an exciting project that allowed me to apply my skills in user research, wireframing, prototyping, and visual design. I thoroughly enjoyed the experience and gained valuable insights into the field of UI/UX design.",
+      "I designed Cognitive Cue, a dementia-assistive IoT app that integrates machine learning to offer personalized emergency features for elderly users. By utilizing Azure's cloud computing and storage, I was able to scale the application for widespread use. The app helped improve elderly task efficiency by 40%, offering real-time assistance, health management, and proactive alerts. This innovative project earned me a spot in the second round of the Microsoft Imagine Cup 2024, where I was recognized for enhancing the quality of life for the elderly community.",
+  },
+  {
+    duration: "2022 - 2024",
+    place: "CYSCom Club Member",
+    title: "Extra-curricular Activities",
+    description:
+      "During my time in college, I was an active member of the CYSCom Club, where I organized and led multiple events, technical workshops, and collaborative meets. The club played a vital role in promoting technology, coding, and problem-solving skills within the student community, and I contributed to fostering a collaborative environment that encouraged learning and innovation.",
   },
 ];
 
@@ -246,20 +253,29 @@ export default function Work() {
             </div>
 
             {/* Work Items with animations */}
-            <div className="pb-12">
+            <div className="space-y-1 pb-12">
               {workItems.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`opacity-0 animate-fade-in-up delay-${
-                    (idx + 1) * 200
-                  } group`}
+                  className={`opacity-0 animate-fade-in-up delay-${(idx + 1) * 100} group`}
                 >
                   <div className="py-4">
                     <div className="text-xs text-gray-400 mb-1">
                       {item.duration}
                     </div>
                     <div className="text-lg font-semibold text-[#8f7a67] mb-1">
-                      {item.place}
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          {item.place}
+                        </a>
+                      ) : (
+                        item.place
+                      )}
                     </div>
                     <div className="text-sm text-gray-400 mb-3">
                       {item.title}

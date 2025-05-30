@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
     {
       name: "GitHub",
       icon: <FaGithub className="w-5 h-5" />,
-      url: "https://github.com/kxhrx",
+      url: "https://github.com/kxshrx",
       color: "hover:text-white",
     },
     {

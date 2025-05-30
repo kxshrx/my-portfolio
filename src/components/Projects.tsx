@@ -54,7 +54,7 @@ const Projects: React.FC = () => (
         <div
           key={project.id}
           className={`opacity-0 animate-fade-in-up delay-${
-            (index + 1) * 200
+            (index + 1) * 100
           } group`}
         >
           <div className="py-4 border-b border-gray-800/50 hover:border-[#8f7a67]/30 transition-all duration-300">

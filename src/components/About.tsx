@@ -29,25 +29,25 @@ const About: React.FC = () => {
 
         {/* Rest of your content... */}
         <div className="space-y-3 text-gray-300 leading-relaxed">
-          <p className="text-sm font-light tracking-wide opacity-0 animate-fade-in-up delay-300">
+          <p className="text-sm font-light tracking-wide opacity-0 animate-fade-in-up delay-100">
             I'm a Computer Science student from Chennai who enjoys building practical tech. Most of what I've worked on so far comes from experimenting — trying out things in machine learning, web development, and IoT, and learning as I go.
           </p>
 
-          <p className="text-sm opacity-0 animate-fade-in-up delay-500">
+          <p className="text-sm opacity-0 animate-fade-in-up delay-200">
             Lately, I've been focusing more on AI and how to skill myself properly in that space. There's a lot happening, and I'm just trying to keep up, learn the right tools, and use them for meaningful things — not just chasing hype but trying to build stuff that actually works.
           </p>
 
-          <p className="text-sm opacity-0 animate-fade-in-up delay-700">
+          <p className="text-sm opacity-0 animate-fade-in-up delay-300">
             Outside of projects, I spend a lot of time watching tech videos, following new launches, or just exploring how things work. I also enjoy quiet time outdoors — it helps clear my head and reset.
           </p>
 
-          <p className="text-sm opacity-0 animate-fade-in-up delay-900">
+          <p className="text-sm opacity-0 animate-fade-in-up delay-400">
             This portfolio is just a place to put my work out there. I'm still figuring things out, but open to feedback, learning, and connecting with people on the same path.
           </p>
         </div>
 
         {/* Subtle Call-to-Action */}
-        <div className="opacity-0 animate-fade-in-up delay-1100">
+        <div className="opacity-0 animate-fade-in-up delay-500">
           <p className="text-xs text-gray-400 italic">
             "Side effects may include learning."
           </p>
