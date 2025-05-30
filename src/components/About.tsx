@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from "nextjs-simple-typewriter";
+import Image from "next/image";
 
 const About: React.FC = () => {
   return (
@@ -13,13 +14,13 @@ const About: React.FC = () => {
         <div className="space-y-2">
           <h2 className="text-2xl font-semibold text-white leading-tight">
             <Typewriter
-              words={["Hi, I'm Kishore 🐾"]} // Removed extra spaces
-              loop={1} // Run only once instead of infinite loop
+              words={["Hi, I'm Kishore 🐾"]}
+              loop={1}
               cursor
               cursorStyle="|"
-              typeSpeed={80} // Slightly slower for better emoji rendering
+              typeSpeed={80}
               deleteSpeed={50}
-              delaySpeed={10000} // 8 seconds delay before it runs again (if you want it to repeat)
+              delaySpeed={10000}
             />
           </h2>
 
@@ -27,29 +28,39 @@ const About: React.FC = () => {
           <div className="w-16 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
         </div>
 
-        {/* Rest of your content... */}
         <div className="space-y-3 text-gray-300 leading-relaxed">
           <p className="text-sm font-light tracking-wide opacity-0 animate-fade-in-up delay-100">
-            I'm a Computer Science student from Chennai who enjoys building practical tech. Most of what I've worked on so far comes from experimenting — trying out things in machine learning, web development, and IoT, and learning as I go.
+            I&apos;m a Computer Science student from Chennai who enjoys building
+            practical tech. Most of what I&apos;ve worked on so far comes from
+            experimenting — trying out things in machine learning, web
+            development, and IoT, and learning as I go.
           </p>
 
           <p className="text-sm opacity-0 animate-fade-in-up delay-200">
-            Lately, I've been focusing more on AI and how to skill myself properly in that space. There's a lot happening, and I'm just trying to keep up, learn the right tools, and use them for meaningful things — not just chasing hype but trying to build stuff that actually works.
+            Lately, I&apos;ve been focusing more on AI and how to skill myself
+            properly in that space. There&apos;s a lot happening, and I&apos;m
+            just trying to keep up, learn the right tools, and use them for
+            meaningful things — not just chasing hype but trying to build stuff
+            that actually works.
           </p>
 
           <p className="text-sm opacity-0 animate-fade-in-up delay-300">
-            Outside of projects, I spend a lot of time watching tech videos, following new launches, or just exploring how things work. I also enjoy quiet time outdoors — it helps clear my head and reset.
+            Outside of projects, I spend a lot of time watching tech videos,
+            following new launches, or just exploring how things work. I also
+            enjoy quiet time outdoors — it helps clear my head and reset.
           </p>
 
           <p className="text-sm opacity-0 animate-fade-in-up delay-400">
-            This portfolio is just a place to put my work out there. I'm still figuring things out, but open to feedback, learning, and connecting with people on the same path.
+            This portfolio is just a place to put my work out there. I&apos;m
+            still figuring things out, but open to feedback, learning, and
+            connecting with people on the same path.
           </p>
         </div>
 
         {/* Subtle Call-to-Action */}
         <div className="opacity-0 animate-fade-in-up delay-500">
           <p className="text-xs text-gray-400 italic">
-            "Side effects may include learning."
+            &quot;Side effects may include learning.&quot;
           </p>
         </div>
       </div>
@@ -58,9 +69,11 @@ const About: React.FC = () => {
       <div className="opacity-0 animate-fade-in-scale delay-200 flex-shrink-0">
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8f7a67]/30 to-[#8f7a67]/20 rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-500 blur-sm"></div>
-          <img
+          <Image
             src="/img2.jpg"
             alt="Kishore Kumar J"
+            width={160}
+            height={160}
             className="relative rounded-full object-cover w-40 h-40 border border-gray-700 shadow-lg transition-transform duration-500 group-hover:scale-105"
           />
         </div>

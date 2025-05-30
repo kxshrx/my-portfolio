@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { 
-  FaPython, FaJs, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaJava, FaDocker
+  FaPython, FaJs, FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaJava, FaDocker
 } from 'react-icons/fa';
 import { 
   SiTensorflow, SiKeras, SiScikitlearn, SiPytorch, SiOpencv, SiFlask, SiFastapi, SiExpress, SiTailwindcss, SiPandas, SiNumpy, SiMysql, SiMongodb, SiGithub,SiPostgresql, SiSqlalchemy

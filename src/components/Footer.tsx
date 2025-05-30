@@ -1,20 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { FaTwitter, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 500);
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -52,7 +41,7 @@ const Footer: React.FC = () => {
             <div className="space-y-1.5 mb-4">
               {/* Heading */}
               <h2 className="text-2xl font-semibold text-white">
-                Let's Connect!
+                Let&apos;s Connect!
               </h2>
               {/* Gradient divider - updated to caramel */}
               <div className="flex justify-center">
@@ -63,8 +52,8 @@ const Footer: React.FC = () => {
             {/* Reduced width for the description */}
             <div className="max-w-md mx-auto">
               <p className="text-sm text-gray-300 mb-4">
-                I'm always open to new opportunities and collaborations. Feel
-                free to reach out if you'd like to discuss a project or just
+                I&apos;m always open to new opportunities and collaborations. Feel
+                free to reach out if you&apos;d like to discuss a project or just
                 want to connect!
               </p>
             </div>
