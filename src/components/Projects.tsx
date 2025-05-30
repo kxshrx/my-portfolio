@@ -38,11 +38,11 @@ const Projects: React.FC = () => (
     <div className="flex justify-between items-center mb-4">
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold text-white">Recent Projects</h2>
-        <div className="w-16 h-0.5 bg-gradient-to-r from-[#8b5cf6] to-transparent rounded-full opacity-60"></div>
+        <div className="w-16 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
       </div>
       <Link
         href="/projects"
-        className="text-sm text-[#8b5cf6] hover:text-white transition-colors duration-300 opacity-0 animate-fade-in-up delay-300"
+        className="text-sm text-[#8f7a67] hover:text-white transition-colors duration-300 opacity-0 animate-fade-in-up delay-300"
       >
         <u>View all projects</u>
       </Link>
@@ -57,10 +57,10 @@ const Projects: React.FC = () => (
             (index + 1) * 200
           } group`}
         >
-          <div className="py-4 border-b border-gray-800/50 hover:border-[#8b5cf6]/30 transition-all duration-300">
+          <div className="py-4 border-b border-gray-800/50 hover:border-[#8f7a67]/30 transition-all duration-300">
             {/* Project Title and Links Row */}
             <div className="flex justify-between items-center mb-2">
-              <h3 className="text-base font-medium text-white group-hover:text-[#8b5cf6] transition-colors duration-300">
+              <h3 className="text-base font-medium text-white group-hover:text-[#8f7a67] transition-colors duration-300">
                 {project.title}
               </h3>
               <div className="flex gap-4 flex-shrink-0">
@@ -68,7 +68,7 @@ const Projects: React.FC = () => (
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-gray-400 hover:text-[#8b5cf6] transition-colors duration-300"
+                  className="text-xs text-gray-400 hover:text-[#8f7a67] transition-colors duration-300"
                 >
                   GitHub
                 </a>
@@ -76,7 +76,7 @@ const Projects: React.FC = () => (
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-gray-400 hover:text-[#8b5cf6] transition-colors duration-300"
+                  className="text-xs text-gray-400 hover:text-[#8f7a67] transition-colors duration-300"
                 >
                   Demo
                 </a>

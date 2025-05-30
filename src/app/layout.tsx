@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={spaceGrotesk.className}>
       <body className="min-h-screen flex flex-col">
-        <Header />
-        {children}
+          <Header />
+          {children}
       </body>
     </html>
   );

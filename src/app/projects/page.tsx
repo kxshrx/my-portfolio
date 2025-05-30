@@ -82,7 +82,7 @@ const ProjectsPage: React.FC = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a0826] via-black to-[#2d0036] text-white">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
       {/* Header Spacing */}
       <div className="pt-20">
         <div className="max-w-[736px] mx-auto px-4">
@@ -90,7 +90,7 @@ const ProjectsPage: React.FC = () => {
           <div className="py-12">
             <div className="space-y-2 mb-8">
               <h1 className="text-3xl font-bold text-white">All Projects</h1>
-              <div className="w-20 h-0.5 bg-gradient-to-r from-[#8b5cf6] to-transparent rounded-full opacity-60"></div>
+              <div className="w-20 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
             </div>
             <p className="text-gray-300 text-sm mb-8">
               A comprehensive collection of my work spanning IoT, AI, blockchain, and web development. 
@@ -105,7 +105,7 @@ const ProjectsPage: React.FC = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-3 py-1.5 text-xs rounded-full transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-[#8b5cf6] text-white"
+                      ? "bg-[#8f7a67] text-white"
                       : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
                   }`}
                 >
@@ -122,11 +122,11 @@ const ProjectsPage: React.FC = () => {
                 key={project.id} 
                 className={`opacity-0 animate-fade-in-up delay-${(index + 1) * 100} group`}
               >
-                <div className="border border-gray-800 rounded-lg p-6 hover:border-[#8b5cf6]/30 transition-all duration-300 bg-black/20">
+                <div className="border border-gray-800 rounded-lg p-6 hover:border-[#8f7a67]/30 transition-all duration-300 bg-black/20">
                   {/* Project Header */}
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-4">
                     <div className="flex-1">
-                      <h2 className="text-lg font-semibold text-white group-hover:text-[#8b5cf6] transition-colors duration-300 mb-2">
+                      <h2 className="text-lg font-semibold text-white group-hover:text-[#8f7a67] transition-colors duration-300 mb-2">
                         {project.title}
                       </h2>
                     </div>
@@ -137,7 +137,7 @@ const ProjectsPage: React.FC = () => {
                         href={project.github} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-400 hover:text-white border border-gray-700 hover:border-[#8b5cf6] rounded transition-all duration-300"
+                        className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-400 hover:text-white border border-gray-700 hover:border-[#8f7a67] rounded transition-all duration-300"
                       >
                         <FaGithub className="w-3 h-3" />
                         GitHub
@@ -146,7 +146,7 @@ const ProjectsPage: React.FC = () => {
                         href={project.demo} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-3 py-1.5 text-xs text-[#8b5cf6] hover:text-white bg-[#8b5cf6]/10 hover:bg-[#8b5cf6] rounded transition-all duration-300"
+                        className="flex items-center gap-2 px-3 py-1.5 text-xs text-[#8f7a67] hover:text-white bg-[#8f7a67]/10 hover:bg-[#8f7a67] rounded transition-all duration-300"
                       >
                         <FaExternalLinkAlt className="w-3 h-3" />
                         Demo
@@ -179,7 +179,7 @@ const ProjectsPage: React.FC = () => {
           <div className="text-center pb-12">
             <Link 
               href="/" 
-              className="inline-flex items-center gap-2 text-sm text-[#8b5cf6] hover:text-white transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-sm text-[#8f7a67] hover:text-white transition-colors duration-300"
             >
               <u>Back to Home</u>
             </Link>

@@ -9,25 +9,25 @@ const About: React.FC = () => {
     >
       {/* Text Section */}
       <div className="flex-1 space-y-4">
-        {/* Typewriter Heading - Much more readable */}
+        {/* Typewriter Heading - Fixed emoji and timing */}
         <div className="space-y-2">
           <h2 className="text-2xl font-semibold text-white leading-tight">
             <Typewriter
-              words={["Hi, I'm Kishore  🐾"]}
-              loop={false}
+              words={["Hi, I'm Kishore 🐾"]} // Removed extra spaces
+              loop={1} // Run only once instead of infinite loop
               cursor
               cursorStyle="|"
-              typeSpeed={60}
-              deleteSpeed={40}
-              delaySpeed={2000}
+              typeSpeed={80} // Slightly slower for better emoji rendering
+              deleteSpeed={50}
+              delaySpeed={10000} // 8 seconds delay before it runs again (if you want it to repeat)
             />
           </h2>
 
-          {/* Subtle gradient divider - much lighter */}
-          <div className="w-16 h-0.5 bg-gradient-to-r from-[#8b5cf6] to-transparent rounded-full opacity-60"></div>
+          {/* Gradient divider */}
+          <div className="w-16 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
         </div>
 
-        {/* Introduction Paragraphs - Your authentic content */}
+        {/* Rest of your content... */}
         <div className="space-y-3 text-gray-300 leading-relaxed">
           <p className="text-sm font-light tracking-wide opacity-0 animate-fade-in-up delay-300">
             I'm a Computer Science student from Chennai who enjoys building practical tech. Most of what I've worked on so far comes from experimenting — trying out things in machine learning, web development, and IoT, and learning as I go.
@@ -54,13 +54,10 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Profile Image Section - Enlarged */}
+      {/* Profile Image Section */}
       <div className="opacity-0 animate-fade-in-scale delay-200 flex-shrink-0">
         <div className="relative group">
-          {/* Subtle gradient ring - adjusted for larger image */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8b5cf6]/30 to-[#6b21a8]/30 rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-500 blur-sm"></div>
-
-          {/* Profile Image - Increased from w-32 h-32 to w-40 h-40 */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8f7a67]/30 to-[#8f7a67]/20 rounded-full opacity-50 group-hover:opacity-75 transition-opacity duration-500 blur-sm"></div>
           <img
             src="/img2.jpg"
             alt="Kishore Kumar J"

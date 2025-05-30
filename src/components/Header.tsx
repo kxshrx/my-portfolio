@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="max-w-[736px] mx-auto px-4 flex justify-between items-center py-4">
-        <Link href="/" className="text-base font-semibold text-gray-300 flex-shrink-0 hover:text-[#8b5cf6] transition-colors duration-300">
+        <Link href="/" className="text-base font-semibold text-gray-300 flex-shrink-0 hover:text-[#8f7a67] transition-colors duration-300">
           Kishore Kumar J
         </Link>
         <nav className="flex-shrink-0">
@@ -32,15 +32,15 @@ const Header: React.FC = () => {
             <li>
               <Link 
                 href="/projects" 
-                className="text-gray-300 hover:text-[#8b5cf6] transition-colors duration-300"
+                className="text-gray-300 hover:text-[#8f7a67] transition-colors duration-300"
               >
                 projects
               </Link>
             </li>
             <li>
               <a 
-                href="#work" 
-                className="text-gray-300 hover:text-[#8b5cf6] transition-colors duration-300"
+                href="/work" 
+                className="text-gray-300 hover:text-[#8f7a67] transition-colors duration-300"
               >
                 work
               </a>
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
                 href="https://github.com/kxshrx" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#8b5cf6] transition-colors duration-300 flex items-center gap-1"
+                className="text-gray-300 hover:text-[#8f7a67] transition-colors duration-300 flex items-center gap-1"
                 aria-label="GitHub Profile"
               >
                 <FaGithub className="w-4 h-4" />
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
                 href="/resume.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#8b5cf6] transition-colors duration-300 flex items-center gap-1"
+                className="text-gray-300 hover:text-[#8f7a67] transition-colors duration-300 flex items-center gap-1"
                 aria-label="Download Resume"
               >
                 <FaFileAlt className="w-4 h-4" />

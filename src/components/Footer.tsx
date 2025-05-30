@@ -54,9 +54,9 @@ const Footer: React.FC = () => {
               <h2 className="text-2xl font-semibold text-white">
                 Let's Connect!
               </h2>
-              {/* Gradient divider - positioned relative to text, not extreme left */}
+              {/* Gradient divider - updated to caramel */}
               <div className="flex justify-center">
-                <div className="w-16 h-0.5 bg-gradient-to-r from-[#8b5cf6] to-transparent rounded-full opacity-60"></div>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
               </div>
             </div>
 
@@ -70,10 +70,10 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center gap-4">
-              {/* Email Button */}
+              {/* Email Button - updated to caramel */}
               <a
                 href="mailto:kishore2k26@gmail.com"
-                className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#8b5cf6] hover:text-white bg-[#8b5cf6]/10 hover:bg-[#8b5cf6] rounded-full transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#8f7a67] hover:text-white bg-[#8f7a67]/10 hover:bg-[#8f7a67] rounded-full transition-all duration-300"
               >
                 <FaEnvelope className="w-4 h-4 transition-transform group-hover:scale-110" />
                 kishore2k26@gmail.com
@@ -99,11 +99,11 @@ const Footer: React.FC = () => {
         </section>
       </div>
 
-      {/* Scroll to top button with reduced gap */}
+      {/* Scroll to top button - updated to caramel */}
       <div className="flex justify-center mb-4">
         <button
           onClick={scrollToTop}
-          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#8b5cf6]/20 hover:bg-[#8b5cf6]/40 text-[#8b5cf6] transition-all duration-300 hover:scale-110"
+          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#8f7a67]/20 hover:bg-[#8f7a67]/40 text-[#8f7a67] transition-all duration-300 hover:scale-110"
           aria-label="Scroll to top"
         >
           <IoIosArrowUp className="w-5 h-5" />

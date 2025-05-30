@@ -7,7 +7,7 @@ import SequentialReveal from '../components/SequentialReveal';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col text-white bg-gradient-to-br from-[#1a0826] via-black to-[#2d0036]">
+    <div className="min-h-screen flex flex-col text-white bg-gradient-to-b from-zinc-900 to-black">
       <div className="flex-1 pt-16">
         <Container>
           {/* Each section loads sequentially with increasing delays */}
