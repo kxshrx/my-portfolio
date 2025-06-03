@@ -78,7 +78,7 @@ const TechStack: React.FC = () => {
   return (
     <section id="techstack" className="py-12 px-4 relative">
       <div className="space-y-2 mb-8">
-        <h2 className="text-2xl font-semibold text-white">Tech Stack</h2>
+        <h2 className="text-2xl font-semibold text-white">What I Build With</h2>
         <div className="w-16 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
       </div>
       
