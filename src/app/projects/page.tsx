@@ -1,16 +1,16 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 
+// 85% length project descriptions
 const allProjects = [
   {
-    id: 6,
-    title: "Answerly – AI-Powered Webpage Question Answering",
-    description:
-      "A Chrome extension and backend service that answers questions about any webpage using AI models from Hugging Face and Google Gemini.",
+    id: 1,
+    title: "Answerly – AI-Powered Webpage Q&A",
+    description: "Chrome extension and backend for answering questions about any webpage using AI.",
     longDescription:
-      "Answerly is a Chrome extension with a FastAPI backend that lets users ask questions about any webpage. It uses Hugging Face’s `all-MiniLM-L6-v2` for embeddings and Google Gemini’s `gemini-2.0-flash-lite` for answer generation. Powered by LangChain and ChromaDB, it enables fast, local processing without storing data and real-time Q&A from the browser.",
+      "Answerly is a Chrome extension with a FastAPI backend. It lets you ask questions about any webpage using Hugging Face embeddings and Google Gemini for answers. No data is stored; all processing is local and real-time. The extension injects a sidebar into any webpage, allowing users to select text or ask questions directly. The backend uses LangChain for chunking and embedding the page content, stores embeddings in ChromaDB, and uses Gemini for answer generation. All processing is done client-side for privacy.",
     tech: [
       "LangChain",
       "Google Gemini",
@@ -22,134 +22,102 @@ const allProjects = [
     ],
     github: "https://github.com/kxshrx/answerly",
     demo: "https://github.com/kxshrx/answerly#usage",
-    category: "AI & Browser Tools",
-  },
-  {
-    id: 1,
-    title: "Parallel Shortest Path Finder",
-    description:
-      "A cutting-edge application demonstrating the parallel execution of three popular shortest path algorithms on real-world road networks.",
-    longDescription:
-      "A cutting-edge application demonstrating the parallel execution of three popular shortest path algorithms (Dijkstra, Bellman-Ford, A*) on real-world road networks. It's highly relevant for anyone interested in algorithms, parallel processing, and mapping. Features parallel execution of shortest path algorithms, interactive OpenStreetMap integration, dynamic recalculation of paths with obstacles, and performance comparison of algorithms in real-time.",
-    tech: [
-      "Flask",
-      "NetworkX",
-      "OSMnx",
-      "Parallel Processing",
-      "Leaflet.js",
-      "jQuery",
-    ],
-    github: "https://github.com/yourusername/parallel-shortest-path",
-    demo: "https://parallel-path-demo.vercel.app",
-    category: "Algorithms & Mapping",
+    categories: ["GenAI", "Web"],
   },
   {
     id: 2,
-    title: "Pothole Detection and Alert System",
-    description:
-      "A real-time IoT system that detects potholes using computer vision (YOLO V8) on a Raspberry Pi for smart cities applications.",
+    title: "Autonomous Parallel Path Planning",
+    description: "Modern web app for parallel pathfinding algorithms in autonomous navigation.",
     longDescription:
-      "A real-time IoT system that detects potholes using computer vision (YOLO V8) on a Raspberry Pi. This system is highly relevant for smart cities, road maintenance, and edge computing applications. Features YOLO V8-based pothole detection, real-time data storage and alerts using Firebase, edge computing with Raspberry Pi, and frontend interface for road monitoring.",
-    tech: ["YOLO V8", "OpenCV", "Raspberry Pi", "Firebase", "JavaScript"],
-    github: "https://github.com/yourusername/pothole-detection",
-    demo: "https://pothole-detection-demo.vercel.app",
-    category: "IoT & Computer Vision",
+      "This project demonstrates and compares parallel versus sequential pathfinding algorithms (Dijkstra, A*, Bellman-Ford) on real road networks. It features an interactive map, real-time route calculation, and performance comparison. The backend uses Python with NetworkX and OSMnx for graph operations, while the frontend is built with React and Next.js. Users can select source and destination points, visualize multiple routes, and see speedups from parallel execution.",
+    tech: [
+      "Next.js",
+      "React",
+      "Python",
+      "Flask",
+      "NetworkX",
+      "OSMnx",
+      "React-Leaflet",
+    ],
+    github: "https://github.com/kxshrx/Autonomous-Parallel-Path-Planning",
+    demo: "https://github.com/kxshrx/Autonomous-Parallel-Path-Planning#readme",
+    categories: ["Algorithms", "Web"],
   },
   {
     id: 3,
-    title:
-      "Real-Time Autonomous Vehicle Path Planning Using Parallel Processing",
-    description:
-      "A project that tackles real-time path planning for autonomous vehicles, utilizing parallelized algorithms for faster response times.",
+    title: "Brain Tumor Segmentation",
+    description: "Deep learning project for segmenting brain tumors in MRI scans.",
     longDescription:
-      "A project that tackles real-time path planning for autonomous vehicles, utilizing parallelized algorithms to ensure faster response times for dynamic environments. Features parallelized pathfinding algorithms (Dijkstra, Bellman-Ford, A*), real-time route updates based on dynamic road conditions, and web-based visualization for route planning.",
-    tech: ["Python", "Flask", "OSMNX", "NetworkX", "Multithreading"],
-    github: "https://github.com/yourusername/autonomous-vehicle-path-planning",
-    demo: "https://autonomous-path-demo.vercel.app",
-    category: "Autonomous Systems",
+      "This project uses state-of-the-art deep learning models (U-Net and variants) to segment brain tumors from MRI images. It is designed to support medical diagnostics and research by providing accurate, automated segmentation of tumor regions. The code includes data preprocessing, model training, evaluation, and visualization tools. It leverages PyTorch for model implementation and provides scripts for reproducible experiments on public datasets.",
+    tech: [
+      "Python",
+      "PyTorch",
+      "U-Net",
+      "Medical Imaging",
+    ],
+    github: "https://github.com/kxshrx/brain-tumor-segmentation",
+    demo: "https://github.com/kxshrx/brain-tumor-segmentation#readme",
+    categories: ["Machine Learning"],
   },
   {
     id: 4,
-    title: "PaveSense – Intelligent Road Health Mapping System",
-    description:
-      "A unique system that uses mobile phone sensors to detect potholes and maps their locations in real-time using machine learning.",
+    title: "Sortit – Sorting Visualizer",
+    description: "Interactive web app to visualize sorting algorithms.",
     longDescription:
-      "A unique system that uses mobile phone sensors to detect potholes and maps their locations in real-time. The system's use of machine learning (XGBoost) for pothole detection is particularly noteworthy. Features real-time pothole detection using phone sensors, XGBoost model for pothole classification with high accuracy, and live map visualization of pothole locations with Leaflet.js.",
-    tech: ["Python", "XGBoost", "Leaflet.js", "NumPy", "Mobile Sensors"],
-    github: "https://github.com/yourusername/pavesense",
-    demo: "https://pavesense-demo.vercel.app",
-    category: "Mobile & ML",
-  },
-  {
-    id: 5,
-    title: "Sorting Visualizer",
-    description:
-      "A fun and educational web app that visually demonstrates how different sorting algorithms work with interactive features.",
-    longDescription:
-      "A fun and educational web app that visually demonstrates how different sorting algorithms work. While not as complex as the other projects, it's a highly interactive and valuable tool for learning algorithms. Features visual representation of sorting algorithms, adjustable array size and speed for better user interaction, color-coded elements to track sorting progress, and responsive mobile-friendly interface.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    github: "https://github.com/yourusername/sorting-visualizer",
-    demo: "https://sorting-visualizer-demo.vercel.app",
-    category: "Educational & Algorithms",
+      "Sortit is a fun and educational web app that visually demonstrates how different sorting algorithms work. Users can adjust array size, animation speed, and select from multiple algorithms (Bubble Sort, Selection Sort, Insertion Sort, etc.). The app uses color-coded bars to show progress and swaps in real time. Designed for students and educators, Sortit helps build intuition for algorithmic thinking and complexity analysis.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+    ],
+    github: "https://github.com/kxshrx/Sortit",
+    demo: "https://github.com/kxshrx/Sortit#readme",
+    categories: ["Algorithms", "Web"],
   },
 ];
 
+// Categories as requested
 const categories = [
   "All",
-  "Algorithms & Mapping",
-  "IoT & Computer Vision",
-  "Autonomous Systems",
-  "Mobile & ML",
-  "Educational & Algorithms",
+  "GenAI",
+  "Machine Learning",
+  "Algorithms",
+  "Web",
 ];
 
 const ProjectsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
-  const [filteredProjects, setFilteredProjects] = React.useState(allProjects);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Set the page title when component mounts
   useEffect(() => {
     document.title = "Projects : Kishore Kumar J";
-
-    // Optional: Set meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Explore my projects in algorithms, IoT, autonomous systems, and machine learning"
+        "Explore my projects in GenAI, Machine Learning, Algorithms, and Web development."
       );
     }
   }, []);
 
-  React.useEffect(() => {
-    if (selectedCategory === "All") {
-      setFilteredProjects(allProjects);
-    } else {
-      setFilteredProjects(
-        allProjects.filter((project) => project.category === selectedCategory)
-      );
-    }
-  }, [selectedCategory]);
+  const filteredProjects =
+    selectedCategory === "All"
+      ? allProjects
+      : allProjects.filter((project) =>
+          project.categories.includes(selectedCategory)
+        );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
-      {/* Header Spacing */}
       <div className="pt-20">
         <div className="max-w-[736px] mx-auto px-4">
-          {/* Page Header */}
           <div className="py-12">
             <div className="space-y-2 mb-8">
               <h1 className="text-3xl font-bold text-white">All Projects</h1>
               <div className="w-20 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
             </div>
             <p className="text-gray-300 text-sm mb-8">
-              A comprehensive collection of my work spanning algorithms, IoT,
-              autonomous systems, and machine learning. Each project represents
-              a unique challenge and learning experience in my journey as a
-              developer.
+              A collection of my work in GenAI, Machine Learning, Algorithms, and Web development.
             </p>
-
-            {/* Category Filter */}
             <div className="flex flex-wrap gap-2 mb-8">
               {categories.map((category) => (
                 <button
@@ -166,8 +134,6 @@ const ProjectsPage: React.FC = () => {
               ))}
             </div>
           </div>
-
-          {/* Projects Grid */}
           <div className="space-y-8 pb-12">
             {filteredProjects.map((project, index) => (
               <div
@@ -177,15 +143,22 @@ const ProjectsPage: React.FC = () => {
                 } group`}
               >
                 <div className="border border-gray-800 rounded-lg p-6 hover:border-[#8f7a67]/30 transition-all duration-300 bg-black/20">
-                  {/* Project Header */}
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-4">
                     <div className="flex-1">
                       <h2 className="text-lg font-semibold text-white group-hover:text-[#8f7a67] transition-colors duration-300 mb-2">
                         {project.title}
                       </h2>
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        {project.categories.map((cat) => (
+                          <span
+                            key={cat}
+                            className="text-xs px-2 py-1 bg-[#8f7a67]/20 text-[#8f7a67] rounded"
+                          >
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-
-                    {/* Action Buttons */}
                     <div className="flex gap-3 flex-shrink-0">
                       <a
                         href={project.github}
@@ -207,13 +180,9 @@ const ProjectsPage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-
-                  {/* Project Description */}
                   <p className="text-sm text-gray-300 mb-3 leading-relaxed">
                     {project.longDescription}
                   </p>
-
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
@@ -227,9 +196,12 @@ const ProjectsPage: React.FC = () => {
                 </div>
               </div>
             ))}
+            {filteredProjects.length === 0 && (
+              <div className="text-center text-gray-400 pb-12">
+                No projects match the selected category.
+              </div>
+            )}
           </div>
-
-          {/* Back to Home */}
           <div className="text-center pb-12">
             <Link
               href="/"
