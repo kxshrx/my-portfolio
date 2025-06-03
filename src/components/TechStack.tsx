@@ -10,7 +10,7 @@ import {
 } from 'react-icons/si';
 import { TbBrandCpp } from 'react-icons/tb';
 import { VscHubot } from 'react-icons/vsc';
-import { BiData, BiSearch } from 'react-icons/bi';
+import { BiSearch } from 'react-icons/bi';
 import { MdStorage, MdSearch } from 'react-icons/md';
 
 const technologies = [
