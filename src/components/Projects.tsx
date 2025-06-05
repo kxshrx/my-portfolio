@@ -9,7 +9,7 @@ const projects = [
     description:
       "Parallelized Dijkstra's, Bellman-Ford, and Bidirectional A* algorithms with multithreading to optimize route planning. Built a Flask web app to visualize dynamic paths based on real-time roadblocks and traffic conditions.",
     tech: ["Python", "Flask", "OSMNX", "NetworkX", "Multithreading"],
-    github: "https://github.com/yourusername/autonomous-vehicle-path-planning",
+    github: "https://github.com/kxshrx/Autonomous-Parallel-Path-Planning",
     demo: "https://path-planning-demo.vercel.app",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     description:
       "Mobile sensor-based pothole detection system using accelerometer, gyroscope, and GPS data. Achieved ~87% real-world accuracy with XGBoost model and real-time geotagged mapping with ~2-second delay.",
     tech: ["Python", "XGBoost", "Leaflet.js", "NumPy", "Mobile Sensors"],
-    github: "https://github.com/yourusername/pavesense",
+    github: "https://github.com/kxshrx/pavesense",
     demo: "https://pavesense-demo.vercel.app",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     description:
       "CNN-based medical imaging system to classify MRI brain scans into 4 tumor types. Features Flask API for real-time predictions with Express.js backend and optimized preprocessing with image augmentation.",
     tech: ["TensorFlow", "Keras", "Flask", "Express.js", "OpenCV"],
-    github: "https://github.com/yourusername/brain-tumor-classification",
+    github: "https://github.com/kxshrx/brain-tumor-segmentation",
     demo: "https://brain-tumor-demo.vercel.app",
   },
 ];
@@ -78,7 +78,7 @@ const Projects: React.FC = () => (
                   rel="noopener noreferrer"
                   className="text-xs text-gray-400 hover:text-[#8f7a67] transition-colors duration-300"
                 >
-                  Demo
+                  {/* Demo */}
                 </a>
               </div>
             </div>

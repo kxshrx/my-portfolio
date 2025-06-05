@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           href="/"
           className="text-base font-semibold text-gray-300 flex-shrink-0 hover:text-[#8f7a67] transition-colors duration-300"
         >
-          Kishore Kumar J
+          J Kishore Kumar
         </Link>
         <nav className="flex-shrink-0">
           <ul className="flex gap-4 text-sm items-center">

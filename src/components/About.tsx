@@ -17,7 +17,7 @@ const About: React.FC = () => {
               words={["Hi, I'm Kishore 🐾"]}
               loop={1}
               cursor
-              cursorStyle="|"
+              cursorStyle=" "
               typeSpeed={80}
               deleteSpeed={50}
               delaySpeed={10000}

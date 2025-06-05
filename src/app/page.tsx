@@ -7,7 +7,7 @@ import SequentialReveal from '../components/SequentialReveal';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portfolio : Kishore Kumar J',
+  title: "Kishore's Portfolio",
   description: 'Computer Science student passionate about AI, web development, and IoT',
 };
 export default function Home() {

@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
       {/* Footer content - same width as About/Projects */}
       <div className="max-w-3xl mx-auto px-4 py-3">
         <p className="text-center text-xs text-gray-400">
-          Kishore Kumar J
+          J Kishore Kumar
         </p>
       </div>
     </footer>

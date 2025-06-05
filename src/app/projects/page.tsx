@@ -89,7 +89,7 @@ const ProjectsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
-    document.title = "Projects : Kishore Kumar J";
+    document.title = "Projects : Kishore";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

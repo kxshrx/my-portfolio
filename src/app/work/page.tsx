@@ -230,7 +230,7 @@ const workItems = [
 export default function Work() {
   // Set the page title when component mounts
   useEffect(() => {
-    document.title = "Work : Kishore Kumar J";
+    document.title = "Work : Kishore";
 
     // Optional: Set meta description
     const metaDescription = document.querySelector('meta[name="description"]');
