@@ -1,38 +1,23 @@
-import Container from '../components/Container';
-import About from '../components/About';
-import TechStack from '../components/TechStack';
-import Projects from '../components/Projects';
-import Footer from '../components/Footer';
-import SequentialReveal from '../components/SequentialReveal';
+import About from '../components/sections/About';
+import TechStack from '../components/sections/TechStack';
+import Certifications from '../components/sections/Certifications';
+import Projects from '../components/sections/Projects';
+import Footer from '../components/layout/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Kishore's Portfolio",
   description: 'Computer Science student passionate about AI, web development, and IoT',
 };
+
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col text-white bg-gradient-to-b from-zinc-900 to-black">
-      <div className="flex-1 pt-16">
-        <Container>
-          {/* Each section loads sequentially with increasing delays */}
-          <SequentialReveal delay={0.2} duration={1.0}>
-            <About />
-          </SequentialReveal>
-          
-          <SequentialReveal delay={0.8} duration={1.0}>
-            <TechStack />
-          </SequentialReveal>
-          
-          <SequentialReveal delay={1.4} duration={1.0}>
-            <Projects />
-          </SequentialReveal>
-        </Container>
-      </div>
-      
-      <SequentialReveal delay={2.0} duration={0.8}>
-        <Footer />
-      </SequentialReveal>
-    </div>
+    <main className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white pt-20">
+      <About />
+      <TechStack />
+      <Certifications />
+      <Projects />
+      <Footer />
+    </main>
   );
 }

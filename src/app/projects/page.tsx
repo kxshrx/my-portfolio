@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
+import Container from "../../components/ui/Container";
 
 // 85% length project descriptions
 const allProjects = [
@@ -109,7 +110,7 @@ const ProjectsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
       <div className="pt-20">
-        <div className="max-w-[736px] mx-auto px-4">
+        <Container>
           <div className="py-12">
             <div className="space-y-2 mb-8">
               <h1 className="text-3xl font-bold text-white">All Projects</h1>
@@ -138,9 +139,7 @@ const ProjectsPage: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className={`opacity-0 animate-fade-in-up delay-${
-                  (index + 1) * 100
-                } group`}
+                className="group"
               >
                 <div className="border border-gray-800 rounded-lg p-6 hover:border-[#8f7a67]/30 transition-all duration-300 bg-black/20">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-4">
@@ -210,7 +209,7 @@ const ProjectsPage: React.FC = () => {
               <u>Back to Home</u>
             </Link>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

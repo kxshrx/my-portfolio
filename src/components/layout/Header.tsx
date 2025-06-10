@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[736px] mx-auto px-4 flex justify-between items-center py-4">
+      <div className="max-w-[844] mx-auto px-4 flex justify-between items-center py-4">
         <Link
           href="/"
           className="text-base font-semibold text-gray-300 flex-shrink-0 hover:text-[#8f7a67] transition-colors duration-300"
