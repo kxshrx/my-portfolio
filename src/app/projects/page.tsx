@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 import Container from "../../components/ui/Container";
 
-// 85% length project descriptions
 const allProjects = [
   {
     id: 1,
@@ -77,7 +76,6 @@ const allProjects = [
   },
 ];
 
-// Categories as requested
 const categories = [
   "All",
   "GenAI",
@@ -91,6 +89,18 @@ const ProjectsPage: React.FC = () => {
 
   useEffect(() => {
     document.title = "Projects : Kishore";
+    
+    // Set favicon
+    const favicon = document.querySelector("link[rel='icon']") as HTMLLinkElement;
+    if (favicon) {
+      favicon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>";
+    } else {
+      const newFavicon = document.createElement("link");
+      newFavicon.rel = "icon";
+      newFavicon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>";
+      document.head.appendChild(newFavicon);
+    }
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
@@ -100,12 +110,9 @@ const ProjectsPage: React.FC = () => {
     }
   }, []);
 
-  const filteredProjects =
-    selectedCategory === "All"
-      ? allProjects
-      : allProjects.filter((project) =>
-          project.categories.includes(selectedCategory)
-        );
+  const filteredProjects = selectedCategory === "All" 
+    ? allProjects 
+    : allProjects.filter((project) => project.categories.includes(selectedCategory));
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">

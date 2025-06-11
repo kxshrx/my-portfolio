@@ -1,6 +1,14 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Container from "../../components/ui/Container";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Work : Kishore",
+  description: "My professional experience and internships",
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>"
+  }
+};
 
 const workItems = [
   {
@@ -36,20 +44,6 @@ const workItems = [
 ];
 
 export default function Work() {
-  // Set the page title when component mounts
-  useEffect(() => {
-    document.title = "Work : Kishore";
-
-    // Optional: Set meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "My professional experience and internships"
-      );
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
       <div className="pt-20">
