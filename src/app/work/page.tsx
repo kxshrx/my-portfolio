@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../components/ui/Container";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Work : Kishore",
@@ -83,6 +84,14 @@ export default function Work() {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="text-center pb-12">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-sm text-[#8f7a67] hover:text-white transition-colors duration-300"
+            >
+              <u>Back to Home</u>
+            </Link>
           </div>
         </Container>
       </div>

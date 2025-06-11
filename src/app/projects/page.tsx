@@ -100,7 +100,7 @@ const ProjectsPage: React.FC = () => {
         <Container>
           <div className="py-12">
             <div className="space-y-2 mb-8">
-              <h1 className="text-3xl font-bold text-white">All Projects</h1>
+              <h1 className="text-3xl font-bold text-white">Projects</h1>
               <div className="w-20 h-0.5 bg-gradient-to-r from-[#8f7a67] to-transparent rounded-full opacity-60"></div>
             </div>
             <p className="text-gray-300 text-sm mb-8">
