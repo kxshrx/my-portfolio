@@ -1,13 +1,10 @@
 import React from "react";
 import Container from "../../components/ui/Container";
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Work : Kishore",
   description: "My professional experience and internships",
-  icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>"
-  }
 };
 
 const workItems = [
@@ -57,10 +54,7 @@ export default function Work() {
             {/* Work Items */}
             <div className="space-y-1 pb-12">
               {workItems.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="group"
-                >
+                <div key={idx} className="group">
                   <div className="py-4">
                     <div className="text-xs text-gray-400 mb-1">
                       {item.duration}

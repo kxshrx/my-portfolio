@@ -41,12 +41,12 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/work"
                 className="text-gray-300 hover:text-[#8f7a67] transition-colors duration-300"
               >
                 work
-              </a>
+              </Link>
             </li>
             <li>
               <a

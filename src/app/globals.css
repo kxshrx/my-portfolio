@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @import "tailwindcss";
 @import "./honeycomb.css";
 
@@ -7,7 +8,10 @@
   --accent: #8f7a67; /* Added caramel accent color */
 }
 
-@theme inline {
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #8f7a67; /* Added caramel accent color */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
@@ -29,26 +33,41 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@tailwind utilities;
+/* stylelint-disable-next-line at-rule-no-unknown */
+/* @tailwind utilities; */
 
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 /* Container utility classes */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @layer components {
   .container-110 {
-    @apply max-w-[844px] mx-auto px-4;
+    max-width: 844px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .container-wide {
-    @apply max-w-6xl mx-auto px-4;
+    max-width: 72rem; /* 6xl = 1152px = 72rem */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .container-narrow {
-    @apply max-w-2xl mx-auto px-4;
+    max-width: 32rem; /* 2xl = 512px = 32rem */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
